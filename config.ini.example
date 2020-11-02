@@ -1,0 +1,10 @@
+[SabesData]
+FiscalCode = 
+Token = 
+
+[Telegram]
+BotToken = 
+ChatId = 
+
+[Run]
+Stop = False
