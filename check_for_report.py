@@ -1,4 +1,6 @@
 from configparser import ConfigParser
+import os
+import pathlib
 import requests
 import urllib.parse
 from selenium import webdriver
@@ -9,7 +11,11 @@ from xvfbwrapper import Xvfb
 with Xvfb() as xvfb:
     # set firefox headless mode
     options = Options()
-    #options.headless = True
+    options.headless = True
+
+    # change working directory
+    workingdir = pathlib.Path(__file__).parent.absolute()
+    os.chdir(workingdir)
 
     # read configuration file
     parser = ConfigParser()
